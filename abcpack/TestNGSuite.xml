@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Default suite" parallel="tests">
+
+<listeners>
+    <listener class-name="abcpack.RetryListner" />
+</listeners>
+  
+  <test thread-count="5" verbose="2" name="Sanity in GC">
+  <parameter name="browser" value="GC"/>
+    <classes>
+      <class name="abcpack.AlertDemo"/>
+      <class name="abcpack.LinksDemo"/>
+      <class name="abcpack.BrowserHistory"/>
+    </classes>
+  </test> 
+  
+</suite> 
